@@ -57,14 +57,21 @@
 
 async function apiFetch3() {
     console.log("0");
-    let data;
+    const SuccessfullyFetched = 'Successfully Fetched';
+
     const res = await fetch(link0)
     .then((res) => res.json())
-    .then((res) => data = res)
+
 
     console.log(res);
     let length = res.length;
     console.log(length);
+
+    data = res.map(aID => aID.id)
+    changed = data.join(", ");
+
+    console.log(changed);
+
 
     let user = res[length - 1];
     console.log(user);
@@ -73,6 +80,10 @@ async function apiFetch3() {
     document.getElementById("Age_value").innerHTML = `Age: ${user.Age}`;
     document.getElementById("DickLenght_value").innerHTML = `Dick Lenght: ${user.DickLenght}`;
     document.getElementById("Salary_value").innerHTML = `Salary: ${user.Salary}`;
+
+    document.getElementById("existsIDs").innerHTML = `Exists Id's: ${changed}`;
+
+    document.getElementById('postSuccessfully').innerHTML = SuccessfullyFetched;
 
     // document.getElementById("apiFetch").innerHTML = end;
 }

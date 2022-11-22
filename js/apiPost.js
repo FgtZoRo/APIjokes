@@ -29,11 +29,14 @@ let Age;
 let DickLenght;
 let Salary;
 
+const postSuccessfullyUpoladed = 'Post successfully uploaded';
 
 Name = document.getElementById("Name").value;
 Age = document.getElementById("Age").value;
 DickLenght = document.getElementById("DickLenght").value;
 Salary = document.getElementById("Salary").value;
+
+document.getElementById('postSuccessfully').innerHTML = postSuccessfullyUpoladed;
 
     fetch(link0, {
     method: 'POST',
@@ -52,6 +55,28 @@ Salary = document.getElementById("Salary").value;
 })
 .then(response => response.json())
 .then(response => console.log(JSON.stringify(response)))
+
+console.log(1);
+
+async function postIdFetch() {
+    console.log('hui');
+    let options = { method: 'GET' };
+    
+    ArrayIDs = await fetch(link0, options)
+    .then((ArrayIDs) => ArrayIDs.json())
+    
+    console.log(ArrayIDs)
+
+    data = ArrayIDs.map(aID => aID.id)
+    changed = data.join(", ");
+
+    console.log(changed);
+
+    document.getElementById("existsIDs").innerHTML = `Exists Id's: ${changed}`;
+}
+
+postIdFetch(link0);
+
 }
 
 

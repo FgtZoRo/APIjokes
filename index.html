@@ -19,11 +19,16 @@
             </form>
         </div>
 
-        <div class="user">
-            <p class="item" id="Name_value">Name: </p>
-            <p class="item" id="Age_value">Age:</p>
-            <p class="item" id="DickLenght_value">Dick Lenght:</p>
-            <p class="item" id="Salary_value">Salary:</p>
+        <div class="stats">
+            <div class="user">
+                <p class="item" id="Name_value">Name: </p>
+                <p class="item" id="Age_value">Age:</p>
+                <p class="item" id="DickLenght_value">Dick Lenght:</p>
+                <p class="item" id="Salary_value">Salary:</p>
+            </div>
+            <div class="existsIDs">
+                <p class="exID" id="existsIDs">Exists Id's:</p>
+            </div>
         </div>
 
         <!-- <div class="pBlock">
@@ -34,7 +39,7 @@
         </div> -->
 
         <div class="clr">
-            <input value="" type="text" id="deleteById" placeholder="enter number of post"/>
+            <input value="" type="text" id="deleteById" placeholder="enter id 2 delete"/>
             <div class="clrBtn">
                 <button onclick="deleteID()" class="button">Clear</button>
             </div>
@@ -47,10 +52,13 @@
                 <button onclick="apiPost1()" class="button">apiPost1</button>
             -->
             <!-- <button onclick="apiFetch()" class="button">apiFetch</button> -->
-            <button onclick="apiPost2()" class="button">apiPost2</button>
-            <button onclick="apiFetch3()" class="button">apiFetch3</button>
-            <!-- <button onclick="clearApi()" class="button">Clear Api</button> -->
+            <button onclick="apiPost2()" class="button">apiPost</button>
+            <button onclick="apiFetch3()" class="button">apiFetch</button>
+            <button onclick="clearApi()" class="button">Clear Api</button>
             
+        </div>
+        <div class="txt">
+            <p id="postSuccessfully"></p>
         </div>
     </div>
 

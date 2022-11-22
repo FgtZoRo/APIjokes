@@ -55,3 +55,16 @@ body{
     position: relative;
     top: 7vh;
 }
+
+
+.stats{
+    display: flex;
+    align-items:unset;
+    justify-content:space-between;
+}
+
+.existsIDs{
+    width: 50vh;
+    height: 20vh;
+    margin-top: 6vh;
+}
